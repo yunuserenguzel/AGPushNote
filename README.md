@@ -6,7 +6,7 @@ This is an edited version of AGPushNoteView.
 
 This version is used in Which'z App. Below the example how we used it. There are some significant changes:
 
-* PushNote model class is added. It has 3 properties: message, iconImageName and userInfo.
+* `PushNote` model class is added. It has 3 properties: `message`, `iconImageName` and `userInfo`.
 * Since, this could mainly be used for showing remote push notifications in the app, in this way you can pass the userInfo which you gained from AppDelegate.
 * UI is changed.
 * Added bounce effect for showing.
