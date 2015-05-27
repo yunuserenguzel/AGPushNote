@@ -11,7 +11,7 @@ I used this version for Which'z App. Below the example how we used it. There are
 * Added bounce effect for showing.
 * Added iPhone 6 and iPhone 6 + support. 
 
-<img src="https://github.com/avielg/AGPushNote/blob/master/Resources/push_ex.png?raw=true" height="50%">
+<img src="https://github.com/yunuserenguzel/AGPushNote/blob/master/Resources/push_ex.png" height="50%">
 
 * Will look like iOS7 on iOS7 and will (try to) look like iOS6 on iOS6.
 * Both block and protocol ways are available to control the action of tapping the message and showing/dismissing the view.
