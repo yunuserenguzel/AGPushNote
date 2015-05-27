@@ -2,12 +2,20 @@ AGPushNote
 ==========
 
 Custom view for easily displaying in-app push notification that feels like default iOS banners.
+This is an edited version of AGPushNoteView.
+I used this version for Which'z App. Below the example how we used it. There are some significant changes:
+
+* PushNote model class is added. It has 3 properties: message, iconImageName and userInfo.
+* Since, this could mainly be used for showing remote push notifications in the app, in this way you can pass the userInfo which you gained from AppDelegate.
+* UI is changed.
+* Added bounce effect for showing.
+* Added iPhone 6 and iPhone 6 + support. 
 
 <img src="https://github.com/avielg/AGPushNote/blob/master/Resources/push_ex.png?raw=true" height="50%">
 
 * Will look like iOS7 on iOS7 and will (try to) look like iOS6 on iOS6.
 * Both block and protocol ways are available to control the action of tapping the message and showing/dismissing the view.
-* Automatic handling for more than 1 push - Try calling `showWithNotificationMessage:` repeatedly to see how this works (Shown in the example app).
+* Automatic handling for more than 1 push - Try calling `showNotification:` repeatedly to see how this works (Shown in the example app).
 * Action block for tapping the message can be changed at any time - even after the view is already on screen! (Use `setMessageAction:` to set it). 
 * Optionaly hide the view after X seconds (Default is 5), remove comment in code the make this work...
 
@@ -18,16 +26,19 @@ This is a one liner. Simply import and call this method to show a message:
 #import "AGPushNoteView.h"
 .
 .
-[AGPushNoteView showWithNotificationMessage:@"John Doe sent you a message!"];
+AGPushNote* pushNote = [[AGPushNote alloc] init];
+pushNote.message = @"John Doe sent you a message!";
+pushNote.iconImageName = @"new_message.png";
+[AGPushNoteView showNotification:pushNote];
 ```
 
 To set the action for when the user tap the message, call:
 ```objc
-[AGPushNoteView setMessageAction:^(NSString *message) {
+[AGPushNoteView setMessageAction:^(AGPushNote *pushNote){
         // Do something...
     }];
 ```
-* Since AGPushNote can handle showing multiple notifications, the `message` object in the block will be the message the user tapped on.
+* Since AGPushNote can handle showing multiple notifications, the `pushNote` object in the block will be the pushNote the user tapped on.
 
 
 ## More Stuff
@@ -54,7 +65,6 @@ The default 5 seconds delay is set in a define in the head of the `.m` file:
 ```
 
 ## Things to see, stuff to do, places to go
-* Add cool parallax effect to the iOS7 view (Supposed to be easy, less easy when subclassing `UIToolbar` instead `UIView`...).
 * Add option to put small icon next to the message.
 * Add option to switch the X button to the right side.
 

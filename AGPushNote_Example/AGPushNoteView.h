@@ -7,20 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@interface AGPushNote : NSObject
+
+@property NSString* message; //message text
+@property NSString* iconImageName; // icon to be shown on left
+@property NSDictionary* userInfo; // to pass the actual user info if this is push notification triggered
+
+@end
+
 @protocol AGPushNoteViewDelegate <NSObject>
 @optional
 - (void)pushNoteDidAppear; // Called after the view has been fully transitioned onto the screen. (equel to completion block).
 - (void)pushNoteWillDisappear; // Called before the view is hidden, after the message action block.
 @end
 
-@interface AGPushNoteView : UIToolbar
-+ (void)showWithNotificationMessage:(NSString *)message;
-+ (void)showWithNotificationMessage:(NSString *)message completion:(void (^)(void))completion;
+@interface AGPushNoteView : UIView
++ (void)showNotification:(AGPushNote*)pushNote;
++ (void)showNotification:(AGPushNote *)pushNote completion:(void (^)(void))completion;
 + (void)close;
-+ (void)closeWitCompletion:(void (^)(void))completion;
++ (void)closeWithCompletion:(void (^)(void))completion;
 + (void)awake;
 
-+ (void)setMessageAction:(void (^)(NSString *message))action;
++ (void)setMessageAction:(void (^)(AGPushNote* pushNote))action;
 + (void)setDelegateForPushNote:(id<AGPushNoteViewDelegate>)delegate;
 
 @property (nonatomic, weak) id<AGPushNoteViewDelegate> pushNoteDelegate;

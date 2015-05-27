@@ -22,7 +22,9 @@
 		299C568E190F867300C8AECF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299C568C190F867300C8AECF /* InfoPlist.strings */; };
 		299C5690190F867300C8AECF /* AGPushNote_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */; };
 		299C569D190F872600C8AECF /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C569B190F872600C8AECF /* AGPushNoteView.m */; };
-		299C569E190F872600C8AECF /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299C569C190F872600C8AECF /* AGPushNoteView.xib */; };
+		AED462B91B166AD900A78487 /* dismiss_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AED462B71B166AD900A78487 /* dismiss_highlighted@2x.png */; };
+		AED462BA1B166AD900A78487 /* dismiss_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AED462B81B166AD900A78487 /* dismiss_normal@2x.png */; };
+		AED462BC1B166BC100A78487 /* whichz_share.png in Resources */ = {isa = PBXBuildFile; fileRef = AED462BB1B166BC100A78487 /* whichz_share.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,9 @@
 		299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGPushNote_ExampleTests.m; sourceTree = "<group>"; };
 		299C569A190F872600C8AECF /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushNoteView.h; sourceTree = "<group>"; };
 		299C569B190F872600C8AECF /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushNoteView.m; sourceTree = "<group>"; };
-		299C569C190F872600C8AECF /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPushNoteView.xib; sourceTree = "<group>"; };
+		AED462B71B166AD900A78487 /* dismiss_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dismiss_highlighted@2x.png"; sourceTree = "<group>"; };
+		AED462B81B166AD900A78487 /* dismiss_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dismiss_normal@2x.png"; sourceTree = "<group>"; };
+		AED462BB1B166BC100A78487 /* whichz_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whichz_share.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 				299C5676190F867300C8AECF /* Main.storyboard */,
 				299C5679190F867300C8AECF /* AGViewController.h */,
 				299C567A190F867300C8AECF /* AGViewController.m */,
+				AED462BB1B166BC100A78487 /* whichz_share.png */,
 				299C566B190F867300C8AECF /* Supporting Files */,
 			);
 			path = AGPushNote_Example;
@@ -161,9 +166,10 @@
 		299C5699190F870700C8AECF /* PushNote View */ = {
 			isa = PBXGroup;
 			children = (
+				AED462B71B166AD900A78487 /* dismiss_highlighted@2x.png */,
+				AED462B81B166AD900A78487 /* dismiss_normal@2x.png */,
 				299C569A190F872600C8AECF /* AGPushNoteView.h */,
 				299C569B190F872600C8AECF /* AGPushNoteView.m */,
-				299C569C190F872600C8AECF /* AGPushNoteView.xib */,
 			);
 			name = "PushNote View";
 			sourceTree = "<group>";
@@ -245,10 +251,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299C569E190F872600C8AECF /* AGPushNoteView.xib in Resources */,
+				AED462BC1B166BC100A78487 /* whichz_share.png in Resources */,
 				299C567D190F867300C8AECF /* Images.xcassets in Resources */,
 				299C566F190F867300C8AECF /* InfoPlist.strings in Resources */,
+				AED462B91B166AD900A78487 /* dismiss_highlighted@2x.png in Resources */,
 				299C5678190F867300C8AECF /* Main.storyboard in Resources */,
+				AED462BA1B166AD900A78487 /* dismiss_normal@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +485,7 @@
 				299C5695190F867300C8AECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		299C5696190F867300C8AECF /* Build configuration list for PBXNativeTarget "AGPushNote_ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +494,7 @@
 				299C5698190F867300C8AECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,15 +24,22 @@ static NSInteger pushCounter = 0;
 }
 
 - (IBAction)pushNowAction:(UIButton *)sender {
-    [AGPushNoteView showWithNotificationMessage:[NSString stringWithFormat:@"%d", pushCounter++]];
-    [AGPushNoteView setMessageAction:^(NSString *message) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"PUSH"
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Close"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }];
+//    [AGPushNoteView showWithNotificationMessage:[NSString stringWithFormat:@"%d", pushCounter++]];
+  AGPushNote* pushNote = [[AGPushNote alloc] init];
+  pushNote.iconImageName = @"whichz_share";
+  pushNote.userInfo = @{@"push_count":[NSNumber numberWithInteger:pushCounter++]};
+  pushNote.message = [NSString stringWithFormat:@"This AGPushNoteView is used in Which'z App %@", pushNote.userInfo[@"push_count"]];
+  [AGPushNoteView showNotification:pushNote];
+  
+  [AGPushNoteView setMessageAction:^(AGPushNote *pushNote) {
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"PUSH"
+                          message:[NSString stringWithFormat:@"%@",pushNote.userInfo[@"push_count"]]
+                          delegate:nil
+                          cancelButtonTitle:@"Close"
+                          otherButtonTitles:nil];
+    [alert show];
+  }];
 }
 
 @end
