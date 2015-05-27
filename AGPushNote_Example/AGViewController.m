@@ -28,7 +28,7 @@ static NSInteger pushCounter = 0;
   AGPushNote* pushNote = [[AGPushNote alloc] init];
   pushNote.iconImageName = @"whichz_share";
   pushNote.userInfo = @{@"push_count":[NSNumber numberWithInteger:pushCounter++]};
-  pushNote.message = [NSString stringWithFormat:@"This AGPushNoteView is used in Which'z App %@", pushNote.userInfo[@"push_count"]];
+  pushNote.message = [NSString stringWithFormat:@"This AGPushNoteView is used in Which'z App [%@]", pushNote.userInfo[@"push_count"]];
   [AGPushNoteView showNotification:pushNote];
   
   [AGPushNoteView setMessageAction:^(AGPushNote *pushNote) {
