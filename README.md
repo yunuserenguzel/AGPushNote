@@ -3,7 +3,8 @@ AGPushNote
 
 Custom view for easily displaying in-app push notification that feels like default iOS banners.
 This is an edited version of AGPushNoteView.
-I used this version for Which'z App. Below the example how we used it. There are some significant changes:
+
+This version is used in Which'z App. Below the example how we used it. There are some significant changes:
 
 * PushNote model class is added. It has 3 properties: message, iconImageName and userInfo.
 * Since, this could mainly be used for showing remote push notifications in the app, in this way you can pass the userInfo which you gained from AppDelegate.
