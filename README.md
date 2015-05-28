@@ -66,8 +66,8 @@ The default 5 seconds delay is set in a define in the head of the `.m` file:
 ```
 
 ## Things to see, stuff to do, places to go
-* Add option to put small icon next to the message.
-* Add option to switch the X button to the right side.
+* √ Add option to put small icon next to the message.
+* √ Add option to switch the X button to the right side.
 
 ## Credits
 
