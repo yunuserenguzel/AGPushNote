@@ -22,7 +22,7 @@ This version is used in Which'z App. Below the example how we used it. There are
 
 ## Usage
 
-This is a one liner. Simply import and call this method to show a message:
+Simply import and call this method to show a message:
 ```objc
 #import "AGPushNoteView.h"
 .
