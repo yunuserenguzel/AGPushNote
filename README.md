@@ -3,7 +3,7 @@ AGPushNote
 
 Custom view for easily displaying in-app push notification that feels like default iOS banners.
 
-This is an edited version of AGPushNoteView.
+* This is an edited version of AGPushNoteView.
 
 This version is used in Which'z App. Below the example how we used it. There are some significant changes:
 
